@@ -20,17 +20,17 @@ disableImageOptimization = true
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
+highlightCurrentMenuArea = true
+smartTOC = true
 # smartTOCHideUnfocusedChildren = true
 
 [header]
-  layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
+  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
 
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
@@ -39,9 +39,9 @@ disableImageOptimization = true
   homepageImage = "/img/bg2.png" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
-  showMoreLink = false
+  showMoreLink = true
   showMoreLinkDest = "/posts"
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = false # only used when layout equals background
 
@@ -57,8 +57,8 @@ disableImageOptimization = true
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = true
   showDraftLabel = true
-  showEdit = false
-  # editURL = "https://github.com/username/repo/"
+  showEdit = true
+  editURL = "https://github.com/ndvinh98/ndvinh98.github.io/blob/master/content/"
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true
@@ -66,7 +66,7 @@ disableImageOptimization = true
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  showRelatedContent = false
+  showRelatedContent = true
   relatedContentLimit = 3
   showTaxonomies = true
   showAuthorsBadges = true
@@ -76,7 +76,7 @@ disableImageOptimization = true
 
 [list]
   showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false

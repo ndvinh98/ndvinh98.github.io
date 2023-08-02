@@ -15,7 +15,7 @@ description = "My awesome website"
 
 [author]
 name = "Vinh Nguyen"
-image = "img/blowfish_logo.png"
+image = "img/avt4.png"
 headline = "My personal notes"
 bio = "🐛 Sâu non tìm lá 💀"
 links = [{ github = "https://github.com/ndvinh98" }]
