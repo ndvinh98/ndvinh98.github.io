@@ -1,6 +1,6 @@
 ---
-title: "Implement bubblesort in Python"
-summary: "Daily coding practice: Implement bubblesort in Python"
+title: "Implement bubble sort in Python"
+summary: "Daily coding practice: Implement bubble sort in Python"
 categories: ["Python", "Algorithms"]
 tags: ["bubblesort", "sorting"]
 #externalUrl: ""
@@ -9,7 +9,7 @@ date: 2023-08-01
 draft: false
 ---
 
-## 1. What is bubblesort?
+## 1. What is bubble sort?
 Bubble sort is an algorithm that sequentially compares adjacent elements in a loop and swaps them if the next element is smaller than the current element. The process continues until no further swaps are required.
 
 - **Worst complexity**: n^2
@@ -21,7 +21,7 @@ Bubble sort is an algorithm that sequentially compares adjacent elements in a lo
 ## 2. Implementation
 ```python
 
-def bubblesort(arr):
+def bubble_sort(arr):
     while True:
         has_swap = False
         for i in range(len(arr)-1):
