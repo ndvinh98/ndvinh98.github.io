@@ -10,6 +10,7 @@ draft: false
 ---
 
 ## 1. What is insertion sort?
+
 Insertion sort is an algorithm that sequentially moves the current element to the suitable position in the looped part, then updates position of remaining elements in the looped array. The process continues until the loop is end.
 
 - **Worst complexity**: n^2
@@ -17,8 +18,8 @@ Insertion sort is an algorithm that sequentially moves the current element to th
 - **Best complexity**: n
 - **Space complexity**: 1
 
-
 ## 2. Implementation
+
 ```python
 
 def insertion_sort(arr):
@@ -40,7 +41,7 @@ def insertion_sort(arr):
             if insertion_val >= arr[j] and insertion_index-1 == j:
                 # next element is >= current element -> Move to next elem
                 break
-            
+
             if insertion_val >= arr[j]:
                 # if insert value is >= current reverse array element, insert insertion_val to next to current reverse array element
                 arr[j+1] = insertion_val
@@ -52,10 +53,10 @@ def insertion_sort(arr):
                 if j != 0:
                     # continue to find correct position
                     continue
-                
+
                 # the picked insertion element is minimum in array. Insert to the first position of the array
                 sift_arr(arr, i+1, 0)
-                arr[0] = insertion_val        
+                arr[0] = insertion_val
 
     return arr
 
