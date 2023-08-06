@@ -10,6 +10,8 @@ draft: false
 ---
 
 ## 1. What is insertion sort?
+![Insertion Sort](https://he-s3.s3.amazonaws.com/media/uploads/46bfac9.png)
+
 
 Insertion sort is an algorithm that sequentially moves the current element to the suitable position in the looped part, then updates position of remaining elements in the looped array. The process continues until the loop is end.
 
@@ -17,8 +19,9 @@ Insertion sort is an algorithm that sequentially moves the current element to th
 - **Average complexity**: n^2
 - **Best complexity**: n
 - **Space complexity**: 1
-
-## 2. Implementation
+## 2. Visualize
+![Insertion Sort](http://blogs.cuit.columbia.edu/zp2130/files/2018/12/Insertion_Sort.gif)
+## 3. Implementation
 
 ```python
 

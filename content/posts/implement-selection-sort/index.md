@@ -10,6 +10,8 @@ draft: false
 ---
 
 ## 1. What is selection sort?
+![Selection Sort](https://he-s3.s3.amazonaws.com/media/uploads/2888f5b.png)
+
 
 Selection sort is an algorithm that sequentially finds the minimum element in a loop and swaps it with the current element. The process continues until the loop is end.
 
@@ -18,7 +20,10 @@ Selection sort is an algorithm that sequentially finds the minimum element in a 
 - **Best complexity**: n
 - **Space complexity**: 1
 
-## 2. Implementation
+## 2. Visualize
+![Selection Sort](http://blogs.cuit.columbia.edu/zp2130/files/2018/12/Selection_Sort.gif)
+
+## 3. Implementation
 
 ```python
 

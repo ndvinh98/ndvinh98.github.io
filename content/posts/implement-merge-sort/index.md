@@ -10,7 +10,8 @@ draft: false
 ---
 
 ## 1. What is merge sort?
-![Merge Sort](merge-sort.png)
+![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png)
+
 
 Merge sort is an algorithm that divides the array into two equal parts recursively, sorts each part, and then combines them.
 
@@ -19,7 +20,11 @@ Merge sort is an algorithm that divides the array into two equal parts recursive
 - **Average complexity**: {{< katex >}}\\( O(n \log n) \\)
 - **Best complexity**: n
 - **Space complexity**: 1
-## 2. Implementation
+## 2. Visualize
+![Merge Sort](http://blogs.cuit.columbia.edu/zp2130/files/2018/12/Merge_Sort.gif)
+
+
+## 3. Implementation
 
 ```python
 
