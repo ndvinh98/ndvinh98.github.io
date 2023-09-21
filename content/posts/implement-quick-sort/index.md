@@ -28,38 +28,73 @@ There are many ways to implement it based on the pivot chosen (fist element, ran
 
 ## 3. Implementation
 
-### 3.1 Lomuto's partition + Additional Memory
-
-To understand easily, I used the Lomuto's partition approach and additional memory to implement it
+### 3.1 Hoare's partition
 
 ```python
+def partition(array, start, pivot):
+    """This function partitions the array so that the left side is smaller than the pivot and the right side is larger than the pivot."""
 
-def quick_sort(arr):
-    pivot = 0
-    if len(arr) <= 1:
-        return arr
+    # make a flag to check whether the pivot is swapped or not
+    has_pivot_swapped = False
 
-    left_part = []
-    right_part = []
-    for i in range(1, len(arr)):
-        if arr[i] < arr[pivot]:
-            left_part.append(arr[i])
-        else:
-            right_part.append(arr[i])
+    # loop through all elements until the left is smaller than the pivot and the right is larger than the pivot
+    while not has_pivot_swapped:
+        #
+        swapable_index = None
+        is_swapped = False
 
-    # partition the array around the pivot the call the quick_sort recursively
-    left_part = quick_sort(left_part)
-    right_part = quick_sort(right_part)
+        # loop from start index to the pivot index
+        for i in range(start, pivot):
+            if array[i] >= array[pivot]:
+                # If the current element is larger than the pivot, check and set `swapable_index` to the current index if it hasn't been assigned a value.
+                if swapable_index is None:
+                    swapable_index = i
+            else:
+                if swapable_index is None:
+                    # if the swapable_index is not set, skip it
+                    continue
+                else:
+                    # swap the current element with the element at the swappable_index
+                    array[i], array[swapable_index] = array[swapable_index], array[i]
+                    # reset swapable_index index to re check again
+                    swapable_index = None
 
-    return left_part + [arr[pivot]] + right_part
+                    # mark as is_swapped to continue the loop to partition
+                    is_swapped = True
+                    break
+
+        if swapable_index is not None and not is_swapped:
+            # if the swapable_index is set and the other element is larger than the pivot, Swap the element with the pivot
+            array[swapable_index], array[pivot] = array[pivot], array[swapable_index]
+            return swapable_index
+
+        if not swapable_index and not is_swapped:
+            # the pivot is the last element
+            return pivot
+
+
+def quick_sort(array, start=None, end=None):
+    if start is None:
+        start = 0
+    if end is None:
+        end = len(array) - 1
+
+    if start >= end:
+        return array
+
+    pivot = partition(array, start, end)
+    # partition left array
+    quick_sort(array, start, pivot - 1)
+
+    # partition right array
+    quick_sort(array, pivot + 1, end)
+    return array
 
 
 if __name__ == "__main__":
     arr = [-4, 99, 2, -9, 5, 2, 1, 10, 3, 12]
     print("Input array: ", arr)
     print("Sorted array: ", quick_sort(arr))
-
-
 ```
 
 ### 3.2 Lomuto's partition + Additional Memory
@@ -92,6 +127,5 @@ if __name__ == "__main__":
     arr = [-4, 99, 2, -9, 5, 2, 1, 10, 3, 12]
     print("Input array: ", arr)
     print("Sorted array: ", quick_sort(arr))
-
 
 ```
